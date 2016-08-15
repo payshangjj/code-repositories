@@ -32,7 +32,7 @@ def ping_scan(i,iq,oq):
 def arping_scan(i,oq):
     while True:
         ip = oq.get()
-        p = subprocess.Popen("/usr/local/Cellar/arping/2.15/sbin/arping -c 1  %s" % ip,shell = True,stdout = subprocess.PIPE)
+        p = subprocess.Popen("/usr/local/Cellar/arping/2.17/sbin/arping -c 1  %s" % ip,shell = True,stdout = subprocess.PIPE)
         out = p.stdout.read()
         result = out.split()
         pattern = re.compile(".*:.*:.*")

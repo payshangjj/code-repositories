@@ -19,7 +19,7 @@ class pings(threading.Thread):
       ret=os.system('ping -c 1 -W 1 192.168.1.%d >/dev/null' % start)
       if not ret:
         prlock.acquire()#请求输出锁
-        print 'ping 202.102.201.%d ok' % start
+        print 'ping 192.168.1.%d ok' % start
         prlock.release()#释放输出锁
         self.ns +=1
       start+=self.inter
