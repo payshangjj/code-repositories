@@ -1,1 +1,1 @@
-sudo arp-scan --interface en0 -local
+arp-scan --interface en0 -local
